@@ -1,0 +1,39 @@
+name: Build Android APK
+
+# Workflow akan berjalan saat ada push ke branch main/master atau dijalankan manual
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch: 
+
+jobs:
+  build:
+    name: Build APK on Cloud
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17' # Ubah ke '11' atau '8' jika Gradle kamu butuh versi lama
+          cache: 'gradle' # Mempercepat build selanjutnya dengan menyimpan cache
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: launcher-debug-apk
+          # Path standar output APK Android Studio/Gradle. Sesuaikan jika modulmu bukan bernama "app"
+          path: app/build/outputs/apk/debug/app-debug.apk
+          
