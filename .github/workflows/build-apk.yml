@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17' # Ubah ke '11' atau '8' jika Gradle kamu butuh versi lama
+          java-version: '8' # Ubah ke '11' atau '8' jika Gradle kamu butuh versi lama
           cache: 'gradle' # Mempercepat build selanjutnya dengan menyimpan cache
 
       - name: Make gradlew executable
