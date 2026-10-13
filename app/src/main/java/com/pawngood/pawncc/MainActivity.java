@@ -1,4 +1,4 @@
-package com.hardcodedjoy.example.helloworld;
+package com.pawngood.pawncc;
 
 import android.app.Activity;
 import android.os.Bundle;
