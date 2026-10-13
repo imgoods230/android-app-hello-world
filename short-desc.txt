@@ -1,1 +1,1 @@
-Demo Hello World app.
+Pawngood: pawncc for Android.

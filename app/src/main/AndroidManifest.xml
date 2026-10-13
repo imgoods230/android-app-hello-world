@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hardcodedjoy.example.helloworld">
+    package="com.pawngood.pawncc">
 
     <application
         android:icon="@mipmap/ic_launcher"

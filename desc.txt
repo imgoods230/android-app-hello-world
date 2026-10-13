@@ -1,1 +1,1 @@
-This is a demo Hello World app made as simple as possible. It displays the text "Hello, World!".
+This is Pawngood, a project to create a pawncc compiler for Android.

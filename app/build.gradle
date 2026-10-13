@@ -4,7 +4,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.hardcodedjoy.example.helloworld"
+        applicationId "com.pawngood.pawncc"
         minSdkVersion 8
         targetSdkVersion 33
         versionCode 1
